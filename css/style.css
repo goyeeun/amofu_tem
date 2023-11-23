@@ -42,6 +42,7 @@ a {text-decoration: inherit;color: inherit;}
 .header .logo a {color:inherit;}
 .header .logo img {height:100%;}
 .header .logo .logo_on {display:none;}
+.header .logo .mo_logo {display: none;}
 .header .hd_lnb {position:relative;z-index:88;}
 .header .hd_lnb:after {content:'';display:block;clear:both;}
 .header .hd_lnb ul,
@@ -95,6 +96,7 @@ a {text-decoration: inherit;color: inherit;}
 .header.on .hd_lnb ul .depth1 .depth_box li a {color: #333;}
 .header.on .logo img {display:none;}
 .header.on .logo .logo_on {display:block;}
+.header.on .logo .mo_logo {display: none;}
 .header.on .hd_lnb ul .depth1 {color: #333}
 .header.on .hd_lnb ul .depth1 .depth1_a {color:#333;}
 .header.on .hd_right a {color:#333;}
@@ -153,7 +155,7 @@ a {text-decoration: inherit;color: inherit;}
 	.aside .depth_list li a {font-size:14px;}
 
 }
-@media only screen and (max-width:479px) {
+@media only screen and (max-width:480px) {
     .header .hd_right .btn_reservation span {padding-bottom: 5px;}
 }
 
@@ -178,7 +180,12 @@ a {text-decoration: inherit;color: inherit;}
     .ft_kakao {bottom:50px;right:10px;width:55px;}
     .ft_kakao.on {bottom:100px;}
 }
-@media only screen and (max-width:479px) {
+@media only screen and (max-width:480px) {
+    .header .logo img {display: none;}
+    .header.on .logo img {display: none;}
+    .header.on .logo .logo_on {display: none;}
+    .header .logo .mo_logo {display: block;  position: absolute;  top: 50%; transform: translateY(-50%);}
+    .header.on .logo .mo_logo {display: block;}
 }
 
 /* =======================               
@@ -270,7 +277,7 @@ a {text-decoration: inherit;color: inherit;}
     .ft_info li:nth-child(3){margin-left:0; display:block; margin-top:3px;}
     .ft_info li:nth-child(3):before{display:none;}
 }
-@media only screen and (max-width:479px) {
+@media only screen and (max-width:480px) {
     .ft_title h3 {font-size: 0.75em;}
     .ft_title:after { right: 8%;}
     .ft_link li a{font-size:13px;} 

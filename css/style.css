@@ -188,56 +188,6 @@ a {text-decoration: inherit;color: inherit;}
 /* ======================================================
 .footer_wrap
 =========================================================*/
-/* .footer_wrap { padding: 45px 0; position: relative;overflow: hidden;}
-.footer_wrap .footer_box { width:100%; text-align: center;position: relative; overflow: hidden;}
-.ft_title {text-align: center; color: #fff; font-size: 22.5px; font-weight: 400;letter-spacing: -2px;}
-.ft_title:after {content: ''; width: 12px; height: 12px;background: #fff; border-radius: 50%; position: absolute; right: 30%;top: 0; transition: all 2s;}
-.footer_box.on .ft_title:after {
-  animation: ballupdown 2s ease forwards;
-  animation-delay: 1.8s;
-}
-  @keyframes ballupdown {
-    0% {
-        transform: translateY(0)
-    }
-
-    30% {
-        transform: translateY(-20px)
-    }
-
-    50% {
-        transform: translateY(0)
-    }
-
-    70% {
-        transform: translateY(-10px)
-    }
-
-    to {
-        transform: translateY(0)
-    }
-}
-
-
-.ft_link{}
-
-.ft_link ul{font-size:0;text-align:center;}
-.ft_link li{display:inline-block;vertical-align:top;position:relative;}
-.ft_link li:nth-child(n+2){margin-left:84px;}
-.ft_link li:nth-child(n+2):before{width:3px;height:3px; border-radius:100%; position:absolute; left:-43px; top:50%;margin-top:-2px; display:block; content:""; background:#353535;}
-.ft_link li a{font-size:16px; font-weight:300; color:#353535; letter-spacing:0.01em;line-height:20px; font-family:'JejuMyeongjo'}
-.ft_link li a span{font-size:20px;}
-
-.ft_tel{text-align:center; margin-top:45px;}
-.ft_tel a{ font-size:75px; font-weight:400; color:#fff; letter-spacing:0.01em; line-height:1.2em;}
-
-.ft_info{margin-top:50px; }
-.ft_info ul{font-size:0;text-align:center;}
-.ft_info ul:after{display:block; content:"";clear:both}
-.ft_info li {display:inline-block;vertical-align:top;font-size:14px; font-weight:300; color:#fff; letter-spacing:-0.02em; line-height:20px; position:relative;}
-.ft_info li:nth-child(n+2){margin-left:20px;}
-.ft_info li:nth-child(n+2):before{border-left:1px solid #fff; height:12px; position:Absolute; left:-11px; top:50%; margin-top:-6px; display:block; content:"";}
-.ft_info li span{font-weight:700; display:inline-block;vertical-align:top;font-size:14px;} */
 .footer_wrap {width: 100%; padding-right: 10px; padding-left: 10px; margin-right: auto; margin-left: auto;background: #2D3A80; }
 .footer_wrap .footer-box { width: 100%; padding: 15.625em 20px; color: #fff; text-align: center; position: relative; overflow: hidden;}
 .footer_wrap .footer-box:after {  position: absolute; bottom: 45%; left: 50%; width: 70px; height: 70px;border-radius: 50%;background-color: transparent;transition: 1.7s}

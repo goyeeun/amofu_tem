@@ -255,3 +255,23 @@ $(function(){
     });
     
   });
+
+// ABOUT_slide
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper(".about_bottom", {
+        slidesPerView: '4',
+        spaceBetween: 20,
+        autoplay: {
+         delay: 0,
+         stopOnLastSlide: false,
+         disableOnInteraction: true,
+      },
+     
+      speed:7000,
+      loop:true,
+      slidesPerView: "auto",
+      loopedSlides: 3, //noSwiping : true,
+      observer:true, 
+      observeParents:true,
+      });
+});

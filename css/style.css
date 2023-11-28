@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +25,7 @@ a {text-decoration: inherit;color: inherit;}
 }
 
 /*** 레이아웃 ***/
+body {font-family: "Pretendard Variable", Pretendard, sans-serif;}
 #wrap {min-width:280px;max-width:1920px;margin:0 auto;overflow:hidden;}
 .inner {width:1400px;margin:0 auto;position:relative;box-sizing:border-box;overflow: hidden;}
 .inner .inner {padding:0;}
@@ -553,12 +554,12 @@ a {text-decoration: inherit;color: inherit;}
 
 	
 }
-@media only screen and (max-width:380px) {
+@media only screen and (max-width:390px) {
 .room_list .slideWrap {-webkit-box-orient: vertical;
         -webkit-box-direction: reverse;}
-.room_list .optionBox .swiper-pagination {top: 110px;}
+.room_list .optionBox .swiper-pagination {top: 115px;}
 .room_list .optionBox .swiper-pagination li button, .room_list .optionBox .swiper-pagination li button.active { font-size: 0.85em;background-position-y: 6px;}
-.room_list .flexBox { top: 110px; left: 238px;}
+.room_list .flexBox { top: 120px; left: 250px;}
 .room_list .item .txtBox {top: 30%;}
 .room_list .item .txtBox .plus {top: 30%;}
 }
@@ -706,7 +707,7 @@ a {text-decoration: inherit;color: inherit;}
 
 /*** 서브 ***/
 /* sub_About */
-.about_top {position: relative; width: 100%;}
+.about_top {position: relative;}
 .about_top .img_box { width: 100%; height: 520px; float: left; padding: 60px 0px;box-sizing: border-box; }
 .about_top .img_box > .img {width: 100%; height: 100%;}
 .about_top .txt_box {place-content: flex-start; align-items: flex-start; display: flex; flex: 0 0 auto; flex-flow: column; gap: 10px; height: min-content; overflow: hidden; padding: 0px; position: relative; width: 100%;}
@@ -739,3 +740,14 @@ a {text-decoration: inherit;color: inherit;}
     .about_top .img_box {height: 330px; padding: 40px 0;}
     .about_top .txt_box>.rightTxt>.line {width: 50px;height: 3px;}
 }
+
+
+/* sub_travel */
+.sub_travel>.sub_visual {height: 100vh; width: 100%; overflow: hidden; position: relative;}
+.travel_list {width: 100%;margin-top: 78px;}
+.travel_list ul {display: grid;grid-template-columns: 1fr 1fr 1fr;grid-template-rows: 1fr 1fr;color: #333;grid-row-gap: 130px; grid-column-gap: 10px;text-align: left;}
+.travel_list ul li {width: 100%;}
+.travel_list ul li .img {width: 100%;}
+.travel_list ul li .txt {padding-top: 30px;}
+.travel_list ul li .txt h4 {padding-bottom: 30px;}
+.travel_list ul li .txt p {font-weight: 400; }

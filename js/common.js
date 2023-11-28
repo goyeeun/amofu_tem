@@ -43,28 +43,22 @@ $(window).on('scroll', function() {
              $('.depth_list').not($(this).next()).slideUp();
              $(this).next().slideToggle();
          });
+        //  visual_Slid
+         var swiper = new Swiper('.visual .swiper-container', {
+            loop : true,
+            paginationClickable: true,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: '.visual .swiper-button-next',
+                prevEl: '.visual .swiper-button-prev',
+            },
+            effect : 'fade',
+            autoplay: true,
+            autoplaySpeed: 1000,
+            autoplayDisableOnInteraction: false
     });
 
-    // visSlide
-$(function(){
-    var swiper = new Swiper('.visual .swiper-container', {
-        loop : true,
-        paginationClickable: true,
-        spaceBetween: 0,
-        navigation: {
-            nextEl: '.visual .swiper-button-next',
-            prevEl: '.visual .swiper-button-prev',
-        },
-        effect : 'fade',
-        autoplay: true,
-        autoplaySpeed: 1000,
-        autoplayDisableOnInteraction: false
-    });
-});
-//------------visual_slide_end-----------------
-
- // main_room_list
- $(function () {
+    // room_list
     var product = $(".room_list"),
         productText = [],
         productItem = product.find(".item"),
@@ -157,58 +151,58 @@ $(function(){
 
     // 페이지 로딩 후 첫 번째 bullet 활성화
     product.find(".swiper-pagination .bullet button").first().addClass("active");
+
+
+    // main_special_list
+     // var text 배열 선언
+     var text = ['오션뷰온수풀','아모푸카페','개별바베큐','오션뷰테라스','서비스'];
+
+     // 함수를 이용하여 Swiper 초기화
+     function initializeSwiper() {
+         var bottomSwiper = new Swiper('.swiper-bottom', {
+             slidesPerView: '1',
+             pagination: {
+                 el: ".swiper-pagination-custom",
+                 clickable: true,
+                 bulletClass:"custom_bullet",
+                 bulletActiveClass: "swiper-pagination-custom-bullet-active",
+ 
+                 renderBullet: function (index, className) {
+                     return '<div class="'+className+'"><span>'+ (text[index]) +'</span></div>';
+                 },
+             },
+             autoplay: true,
+             speed: 1000,
+             loop: false,
+             touchRatio: 0.2,
+             observer: true,
+             observeParents: true
+         });
+     }
+ 
+     // 화면 폭에 따라 text가 나타나지 않도록 조건 추가
+     function toggleTextVisibility() {
+         if ($(window).width() < 480) {
+             $(".swiper-pagination-custom").hide();
+         } else {
+             $(".swiper-pagination-custom").show();
+         }
+     }
+ 
+     // 초기화 함수 호출
+     initializeSwiper();
+ 
+     // 창 크기가 변경될 때 text 가시성을 토글
+     $(window).on('resize', function() {
+         toggleTextVisibility();
+     });
+ 
+     // 페이지 로딩 후 한번 실행
+     toggleTextVisibility();
+
+
 });
-//------------main_room_list_end-----------------
 
-//special_list
-$(function(){
-    // var text 배열 선언
-    var text = ['오션뷰온수풀','아모푸카페','개별바베큐','오션뷰테라스','서비스'];
-
-    // 함수를 이용하여 Swiper 초기화
-    function initializeSwiper() {
-        var bottomSwiper = new Swiper('.swiper-bottom', {
-            slidesPerView: '1',
-            pagination: {
-                el: ".swiper-pagination-custom",
-                clickable: true,
-                bulletClass:"custom_bullet",
-                bulletActiveClass: "swiper-pagination-custom-bullet-active",
-
-                renderBullet: function (index, className) {
-                    return '<div class="'+className+'"><span>'+ (text[index]) +'</span></div>';
-                },
-            },
-            autoplay: true,
-            speed: 1000,
-            loop: false,
-            touchRatio: 0.2,
-            observer: true,
-            observeParents: true
-        });
-    }
-
-    // 화면 폭에 따라 text가 나타나지 않도록 조건 추가
-    function toggleTextVisibility() {
-        if ($(window).width() < 480) {
-            $(".swiper-pagination-custom").hide();
-        } else {
-            $(".swiper-pagination-custom").show();
-        }
-    }
-
-    // 초기화 함수 호출
-    initializeSwiper();
-
-    // 창 크기가 변경될 때 text 가시성을 토글
-    $(window).on('resize', function() {
-        toggleTextVisibility();
-    });
-
-    // 페이지 로딩 후 한번 실행
-    toggleTextVisibility();
-});
-  //------------special_list_end----------------- 
 
 // main_reserv
 $(function(){
@@ -256,7 +250,7 @@ $(function(){
     
   });
 
-// ABOUT_slide
+// sub_ABOUT_slide
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper(".about_bottom", {
         slidesPerView: '4',

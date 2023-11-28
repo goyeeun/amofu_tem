@@ -207,25 +207,31 @@ $(window).on('scroll', function() {
 // main_reserv
 $(function(){
     const content = "아름다운 여수에서 사랑하는 사람들과 함께\n 특별하고 소중한 시간을 보내보세요.";
-    const text = document.querySelector(".text");
+
+    const text = document.querySelector(".typing");
     let i = 0;
 
-    function typing(){
-        if (i <= 23) {
-            if (content[i] === "." && i === content.length - 1) {
-                text.innerHTML += `<span style="color: #2D3A80; font-size: 35px;">${content[i]}</span>`;
-            } else {
-                text.innerHTML += `<span style="font-weight: normal; color: #111;">${content[i] === "\n" ? "<br/>" : content[i]}</span>`;
-            }
+    function typing() {
+    if (text) {
+        if (i < content.length) {
+        if (content[i] === "." && i === content.length - 1) {
+            text.innerHTML += `<span style="color: #2D3A80; font-size: 40px; font-weight: bold;">${content[i]}</span>`;
         } else {
-            text.innerHTML += content[i] === "\n" ? "<br/>" : content[i];
+            // '아름다운 여수에서 사랑하는 사람들과 함께' 부분에 대한 조건 추가
+            const fontWeightStyle = i < 24 ? "font-weight: normal;" : "font-weight: bold;";
+            text.innerHTML += `<span style="${fontWeightStyle} color: #111;">${content[i] === "\n" ? "<br/>" : content[i]}</span>`;
+        }
         }
 
         i++;
 
         if (i >= content.length) {
-            clearInterval(interval);
+        clearInterval(interval);
         }
+    } else {
+        console.error("");
+        clearInterval(interval);
+    }
     }
 
     const interval = setInterval(typing, 200);
@@ -268,4 +274,35 @@ document.addEventListener('DOMContentLoaded', function () {
       observer:true, 
       observeParents:true,
       });
+
+
+    
 });
+
+$(document).ready(function() {
+    var slideWidth = $('.slider li').width(); // 각 슬라이드의 너비
+    var slideCount = $('.slider li').length; // 슬라이드 개수
+    var currentIndex = 0;
+
+    // 슬라이드를 오른쪽으로 이동하는 함수
+    function nextSlide() {
+        if (currentIndex < slideCount - 2) {
+            currentIndex += 2;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlider();
+    }
+
+    // 슬라이드를 업데이트하는 함수
+    function updateSlider() {
+        var translateValue = -currentIndex * slideWidth;
+        $('.slider').css('transform', 'translateX(' + translateValue + 'px)');
+    }
+
+    // 다음 버튼 클릭 시
+    $('.next-btn').click(function() {
+        nextSlide();
+    });
+});
+

@@ -25,7 +25,7 @@ a {text-decoration: inherit;color: inherit;}
 }
 
 /*** 레이아웃 ***/
-body {font-family: "Pretendard Variable", Pretendard, sans-serif;}
+body {font-family: "Pretendard Variable", sans-serif;}
 #wrap {min-width:280px;max-width:1920px;margin:0 auto;overflow:hidden;}
 .inner {width:1400px;margin:0 auto;position:relative;box-sizing:border-box;overflow: hidden;}
 .inner .inner {padding:0;}

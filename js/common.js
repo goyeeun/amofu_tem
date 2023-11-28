@@ -207,7 +207,7 @@ $(window).on('scroll', function() {
 // main_reserv
 $(function(){
     const content = "아름다운 여수에서 사랑하는 사람들과 함께\n 특별하고 소중한 시간을 보내보세요.";
-    const text = document.querySelector(".text_typing");
+    const text = document.querySelector(".text");
     let i = 0;
 
     function typing(){

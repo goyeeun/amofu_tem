@@ -196,7 +196,7 @@ body {font-family: "Pretendard Variable", sans-serif;}
 .footer_wrap
 =========================================================*/
 .footer_wrap {width: 100%; margin-right: auto; margin-left: auto; position: relative;}
-.footer_wrap .ftr_inner {width: 100%1280;}
+.footer_wrap .ftr_inner {width: 100%;}
 .footer_wrap .footer-box { width: 100%; height: 100%;padding: 13em 20px; color: #fff; text-align: center;overflow: hidden; background: #2D3A80;  clip-path: circle(10% at 50% 20%);transition: clip-path ease 1.5s, background-position cubic-bezier(0, 0, 0.35, 1) .5s;position: relative;}
 .footer_wrap.aos-animate .footer-box {
     clip-path: circle(100% at 50% 50%);
@@ -743,23 +743,30 @@ body {font-family: "Pretendard Variable", sans-serif;}
 
 /* sub_travel */
 .sub_travel>.sub_visual {height: 100vh; width: 100%; overflow: hidden; position: relative;}
-.slider-container {width: 100%;overflow: hidden;}
-.slider { display: flex; transition: transform 0.5s ease-in-out;}
-.slider li { flex: 0 0 50%; /* 50%로 설정하여 2개씩 한 번에 표시 */}
-.img { display: flex;}
-.img img { width: 100%; /* 두 이미지가 50%씩 차지하도록 설정 */}
-.travel_list ul {display: grid;grid-template-columns: 1fr 1fr 1fr;grid-template-rows: 1fr 1fr;color: #333;grid-row-gap: 130px; grid-column-gap: 20px;text-align: left; margin-top: 78px;}
+.travel_list ul {display: grid;grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; grid-row-gap: 130px; grid-column-gap: 20px; margin-top: 70px;}
+.travel_list ul .list {width: 450px; height: 100%; }
+.travel_list ul .list .txt {padding-top: 30px; text-align: left; }
+.travel_list ul .list .txt h4 {padding-bottom: 30px;}
+.travel_list ul .list .txt p {font-weight: 500; }
+/* .travel_list ul {display: grid;grid-template-columns: 1fr 1fr 1fr;grid-template-rows: 1fr 1fr;color: #333;grid-row-gap: 130px; grid-column-gap: 20px;text-align: left; margin-top: 78px;}
 .travel_list ul li {width: 100%;}
 .travel_list ul li .txt {padding-top: 30px;}
 .travel_list ul li .txt h4 {padding-bottom: 30px;}
-.travel_list ul li .txt p {font-weight: 500; }
+.travel_list ul li .txt p {font-weight: 500; } */
 /*--------sub_travel_responsive------------ */
+
+   
 @media only screen and  (max-width:1280px) {
-    .travel_list ul {grid-template-columns: 1fr 1fr;text-align: center;}
+    .travel_list ul .list {width: 380px;}
+    .travel_list ul .list .swiper-slide {background-position: 100% 50%; background-repeat: no-repeat;}
 }
-@media only screen and  (max-width:860px) {
-    .travel_list {width: 90%;} 
-    .travel_list ul {grid-template-columns: 1fr;grid-template-rows: 1fr;}
+@media only screen and  (max-width:1200px) {
+    .travel_list ul {display: grid;grid-template-columns: 1fr 1fr;}
+    .travel_list ul .list {width: 450px; height: 100%; }
+}
+@media only screen and  (max-width:860px) { 
+    .travel_list ul {grid-template-columns: 1fr 1fr;grid-template-rows: 1fr;}
+    .travel_list ul .list {width: 350px;}
 }
 @media only screen and  (max-width:480px) {
 }

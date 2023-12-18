@@ -298,11 +298,19 @@ $(document).ready(function() {
     function updateSlider() {
         var translateValue = -currentIndex * slideWidth;
         $('.slider').css('transform', 'translateX(' + translateValue + 'px)');
-    }
+    }   
 
-    // 다음 버튼 클릭 시
-    $('.next-btn').click(function() {
-        nextSlide();
-    });
+    $(document).ready(function(){
+        $('.travel-container').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: false,
+          arrows: false,
+          fade: true,
+          cssEase: 'linear'
+        });
+      });
 });
 

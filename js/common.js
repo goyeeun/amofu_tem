@@ -299,9 +299,9 @@ $(document).ready(function() {
         var translateValue = -currentIndex * slideWidth;
         $('.slider').css('transform', 'translateX(' + translateValue + 'px)');
     }   
-
+    //travel_slide
     $(document).ready(function(){
-        $('.travel-container').slick({
+        $(' .travel-container').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,

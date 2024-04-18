@@ -294,7 +294,7 @@ $(document).ready(function() {
         updateSlider();
     }
 
-    // 슬라이드를 업데이트하는 함수
+    // travel_list
     function updateSlider() {
         var translateValue = -currentIndex * slideWidth;
         $('.slider').css('transform', 'translateX(' + translateValue + 'px)');

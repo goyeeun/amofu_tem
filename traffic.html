@@ -119,7 +119,7 @@
                             </ul>
                         <div class="depth1">RESERVATION</div>
                             <ul class="depth_list">
-                                <li><a href="#">오시는길</a></li>
+                                <li><a href="#">예약안내</a></li>
                                 <li><a href="#">실시간 예약</a></li>
                             </ul>
             </div>
@@ -128,28 +128,93 @@
         </header>
         <!-- section01 -->
     <div id="container">
-        <section id="content" class="main">
-            <div class="main_visual visual">
+        <section id="content" class="sub sub_traffic">
+            <div class="main_visual visual" style="background-image: url(./img/traffic_top.jpg); background-position: 50% 50%;">
                 <div class="visual_box">
-                    <h2 class="title">amouf poolvilla</h2>
-                    <div class="visual_control">
-                        <div class="swiper-arw swiper-button-prev" style="background: url(./img/main-prev.png) no-repeat left center; background-size: 100%;"></div>
-                        <div class="swiper-arw swiper-button-next" style="background: url(./img/main-next.png) no-repeat left center; background-size: 100%;"></div>
-                    </div>
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="background:url(./img/main1.jpg) center; background-size:cover;"></div>
-                            <div class="swiper-slide" style="background:url(./img/main2.jpg) center; background-size:cover;"></div>
-                            <div class="swiper-slide" style="background:url(./img/main3.jpg) center; background-size:cover;"></div>
-                            <div class="swiper-slide" style="background:url(./img/main4.jpg) center; background-size:cover;"></div>
-                            <div class="swiper-slide" style="background:url(./img/main5.jpg) center; background-size:cover;"></div>
-                            <div class="swiper-slide" style="background:url(./img/main6.jpg) center; background-size:cover;"></div>
-                        </div>
-                    </div>
+                    <h2 class="title">오시는길</h2>
                     <span class="line"></span>
                 </div>
             </div>
+            <div class="sub_cont inner">              
+                <div class="title inner">
+                    <p class="smallTitle">TRAFFIC</p>
+                    <h2 style="font-weight: bold;">찾아오시는 길<b class="end_ico"></b>
+                    </h2> 
+                </div>
+                <div class="map_box inner">                        
+                        <div class="map_inner">
+                        <!-- * 카카오맵 - 지도퍼가기 -->
+                        <!-- 1. 지도 노드 -->
+                        <div id="daumRoughmapContainer1714032555499" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                        <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                        -->
+                        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                        <!-- 3. 실행 스크립트 -->
+                        <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1714032555499",
+                            "key" : "2j5ub",
+                            "mapHeight" : "360"
+                        }).render();
+                        </script>
+                        </div>
+                        <div class="txtBox">
+                            <p class="tit">네비게이션 이용 시</p>
+                            <p class="txt">도로명 주소 | <span>전남 여수시 화양면 장수리 1355-1</span></p>
+                        </div>
+                    </div>
+            </div>
+             <!-- main_reserv -->
+             <div class="main_reserv">
+                <div class="box">
+                    <div class="title">
+                        <span class="bigFont">
+                            <span>M</span>
+                            <span>A</span>
+                            <span>K</span>
+                            <span>E</span>
+                            <span>Y</span>
+                            <span>O</span>
+                            <span>U</span>
+                            <span>R</span>
+                            <span>S</span>
+                            <span>T</span>
+                            <span>A</span>
+                            <span>Y</span>
+                            <span>E</span>
+                            <span>V</span>
+                            <span>E</span>
+                            <span>N</span>
+                            <span>B</span>
+                            <span>E</span>
+                            <span>T</span>
+                            <span>T</span>
+                            <span>E</span>
+                            <span>R</span>
+                        </span>
+                        <div class="text_box">
+                            <span class="typing"></span>
+                            <span class="blink">|</span>
+                          </div>
+                        <div class="txt">
+                            <p style="color: #2D3A80; font-weight: bold; font-family: 'LotteMartDream', sans-serif !important;">아무포 스파펜션  <span class="txt_en" style= " font-weight: normal; color: #333;">| Welcome To AMOFU</span></p>
+                        </div>
+                        <a href="https://booking.naver.com/booking/3/bizes/796806" class="moreBtn" target="_blank">
+                            <div class="circle">
+                                <i class="xi-plus" style="color: #fff; margin-top: 18px;"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--main_reserv-->
+        </section>
       
+            
 
             <!-- footer -->
             <footer>
